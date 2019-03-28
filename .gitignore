@@ -1,0 +1,8 @@
+/vendor
+/.idea
+/.vscode
+/.vagrant
+.env
+.DS_Store
+*.swp
+

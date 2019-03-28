@@ -1,0 +1,19 @@
+<?php
+/**
+ * Entry point for cli scripts
+ */
+
+require __DIR__ . '/vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use Playground\Commands\GroupCalcCommand;
+
+$dotenv = Dotenv\Dotenv::create(__DIR__);
+$dotenv->load();
+
+$application = new Application();
+
+$application->add(new GroupCalcCommand());
+
+$application->run();
+

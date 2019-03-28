@@ -17,6 +17,7 @@
   "require": {
     "php": "^7.2",
     "ext-json": "*",
+    "symfony/console": "^4.2",
     "vlucas/phpdotenv": "^3.3",
     "webmozart/assert": "^1.3"
   },

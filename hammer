@@ -7,13 +7,23 @@ require __DIR__ . '/vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
 use Playground\Commands\GroupCalcCommand;
+use Playground\Commands\ServeCommand;
 
 $dotenv = Dotenv\Dotenv::create(__DIR__);
 $dotenv->load();
 
-$application = new Application();
+try
+{
+    $application = new Application();
 
-$application->add(new GroupCalcCommand());
+    $application->add(new GroupCalcCommand());
+    $application->add(new ServeCommand());
 
-$application->run();
+    $application->run();
+}
+catch(\Exception $e)
+{
+    echo $e->getMessage();
+}
+
 
